@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ,...hình tròn, hình vuông) */
+
+
+html {
+    font-family: 'Times New Roman', Times, serif;
+}
+#main {
+
+}
+/* Từ ngoài vào trong, từ trên xuống dưới, từ tổng quan đến chi tiết */
+#header {
+    height: 46px;
+    background-color: #000;
+}
+
+#nav li {
+    display: inline-block;
+}
+
+#nav .subnav {
+    display: none;
+} 
+
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+}
+
+#nav li:hover a {
+    
+    background-color: #ccc;
+    color: #000;
+}
+#subnav {
+
+}
+
+#subnav li {
+
+}
+#subnav li {
+
+}
