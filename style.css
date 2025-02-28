@@ -12,6 +12,7 @@
 
 html {
     font-family: 'Times New Roman', Times, serif;
+    
 }
 #main {
 
@@ -21,28 +22,56 @@ html {
     height: 46px;
     background-color: #000;
 }
-
-#nav li {
+#nav > li {
     display: inline-block;
+    
+}
+#nav, .subnav {
+    list-style-type: none;
+}
+#nav li {
+    /* display: inline-block; */
+    position: relative;
+    
 }
 
+#nav li:hover .subnav {
+    display: block;
+}
 #nav .subnav {
     display: none;
-} 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) ;
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+    
+}
 
 #nav li a {
-    color: #fff;
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
-    display: inline-block;
+    display: block;
 }
 
-#nav li:hover a {
+#nav > li:hover > a,
+#nav .subnav li:hover a {
     
     background-color: #ccc;
     color: #000;
 }
+
 #subnav {
 
 }
