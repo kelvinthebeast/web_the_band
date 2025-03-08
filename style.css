@@ -19,8 +19,13 @@ html {
 }
 /* Từ ngoài vào trong, từ trên xuống dưới, từ tổng quan đến chi tiết */
 #header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     height: 46px;
     background-color: #000;
+    z-index: 1;
 }
 #nav > li {
     display: inline-block;
@@ -97,6 +102,7 @@ html {
     align-items: center;
     padding: 10px 20px;
     background: #333;
+    
 }
 
 #header .search-btn {
@@ -107,13 +113,38 @@ html {
     padding: 10px;
 }
 
-/* #header .search-btn {
-    float: right;
-    padding: 0 21px;
+#header .search-btn:hover {
+    background-color: #f44366;
 }
 
-#header .search-icon {
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/asset/img/slider1.jpg') top center / cover no-repeat;
+    position: relative;
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    /* cách căn giữa: c1 */
     color: #fff;
-    font-size: 20px;
-    line-height: 46px;
-} */
+    /* left: 50%;
+    transform: translate(-50%);
+    text-align: center; */
+
+    /* ans 2: how to center */
+    /* width: 100%; */
+    /* text-align: center; */
+
+    /* ans3:  */
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#slider .text-heading {
+    font-size: 600;
+    margin-top: 25px;
+
+}
