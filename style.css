@@ -309,10 +309,15 @@ html {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.open {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* display: none; */
 }
 
 .modal-container {
@@ -321,6 +326,7 @@ html {
     min-height: 200px;
     max-width: calc(100% - 32px);
     position: relative;
+    animation: modalFadeIn ease 0.7s;
     
 }
 .modal-header {
@@ -392,3 +398,16 @@ html {
     color: #2196f4;
 }
 /* End modal */
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
