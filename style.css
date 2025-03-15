@@ -9,7 +9,7 @@
 3. Màu sắc
 4. Kiểu dáng (kiểu chữ,...hình tròn, hình vuông) */
 
-
+/* COMMON */
 html {
     font-family: 'Times New Roman', Times, serif;
     
@@ -23,6 +23,23 @@ html {
     color: #ffff;
     cursor: pointer;
 }
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third {
+    width: 33.333333%;
+}
+
+.col-half {
+    width: 50%;
+}
+/* Main */
 #main {
 
 }
