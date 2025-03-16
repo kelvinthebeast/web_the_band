@@ -27,6 +27,18 @@ html {
     margin-left: -8px;
     margin-right: -8px;
 }
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+.mt-16 {
+    margin-top: 16px !important;
+}
 .col {
     float: left;
     padding-left: 8px;
@@ -38,6 +50,10 @@ html {
 
 .col-half {
     width: 50%;
+}
+
+.col-full {
+    width: 100%;
 }
 /* Main */
 #main {
@@ -428,3 +444,34 @@ html {
     }
     
 }
+
+/* contact form */
+.contact-content {
+    margin-top: 48px;
+    line-height: 1.4;
+}
+.contact-info i[class*='ti-'] {
+    width: 30px;
+    /* display: inline-block; */
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .form-submit-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    float: right;
+   
+}
+/* end contact form */
