@@ -55,6 +55,22 @@ html {
 .col-full {
     width: 100%;
 }
+
+.pull-right {
+    float: right !important;
+}
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+
+}  
+.btn:hover {
+    background-color: #f44336;
+}
 /* Main */
 #main {
 
@@ -196,6 +212,7 @@ html {
     padding: 64px 0;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 48px;
 }
 
 
@@ -465,7 +482,7 @@ html {
     width: 100%;
 }
 
-.contact-form .form-submit-btn {
+/* .contact-form .form-submit-btn {
     background-color: #000;
     color: #fff;
     padding: 10px 16px;
@@ -473,5 +490,5 @@ html {
     cursor: pointer;
     float: right;
    
-}
+} */
 /* end contact form */
