@@ -85,6 +85,7 @@ html {
     height: 46px;
     background-color: #000;
     z-index: 1;
+    overflow: hidden;
 }
 #nav > li {
     display: inline-block;
@@ -163,7 +164,7 @@ html {
     background: #333;
     
 }
-
+#header .mobile-menu-btn,
 #header .search-btn {
     
     cursor: pointer;
@@ -175,7 +176,16 @@ html {
 #header .search-btn:hover {
     background-color: #f44366;
 }
+#header .menu-icon:hover {
+    background-color: #ccc;
+}
 
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000
+}
 #slider {
     margin-top: 46px;
     padding-top: 50%;
