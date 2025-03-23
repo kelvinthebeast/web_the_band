@@ -83,14 +83,17 @@ margin-left: auto;
 
 .sidebar-one {
   flex: 1;
+  order: 1;
 }
 
 .sidebar-two {
   flex: 1;
+  order: 2;
 }
 
 .main-column {
   flex: 3;
+  order: 3;
 }
 
 /* Feature layout */
