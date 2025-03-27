@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Đảm bảo body chiếm toàn bộ chiều cao màn hình */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0; /* Loại bỏ margin mặc định của body */
+}
+
+body > div {
+  /* display: flex;
+  flex-direction: column; /* Xếp các nút theo chiều dọc */
+  /* align-items: center; Căn giữa các nút theo chiều ngang */
+  /* gap: 10px; Tạo khoảng cách giữa các nút */ 
+  margin: auto;
+}
+.btn {
+  font-size: 32px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 5px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  padding: 12px 48px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: opacity 0.2 ease-in;
+}
+
+.btn--success {
+background-color:#71be34 ;
+}
+
+.btn--warn {
+background-color: #ffb702;
+}
+.btn--danger {
+  background-color: #ff623d;
+
+}
+
+.btn:hover {
+  opacity: 0.2;
+}
+.btn + .btn {
+  margin-left: 20px;
+}
+
+.btn--disabled {
+  opacity: 0.5 !important;
+  cursor: default;
+}
+
+.btn--size--l {
+  padding: 12px 30px;
+}
+
+

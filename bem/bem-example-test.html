@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 2</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="./bem-example.css">
+</head>
+<body>
+  
+  <div id="toast">
+    <div class="toast toast--success">
+      <div class="toast__icons">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <div class="toast__body">
+        <div class="toast__title">success</div>
+        <div class="toast__message">
+          Lorem ipsum dolor sit amet
+        </div>
+  
+      </div>
+      <div class="toast__close">
+        <i class="fa-solid fa-xmark"></i>
+        
+      </div>
+    </div>
+  
+    <div class="toast toast--info">
+      <div class="toast__icons">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <div class="toast__body">
+        <div class="toast__title">success</div>
+        <div class="toast__message">
+          Lorem ipsum dolor sit amet
+        </div>
+  
+      </div>
+      <div class="toast__close">
+        <i class="fa-solid fa-xmark"></i>
+        
+      </div>
+    </div>
+    <div class="toast toast--warning">
+      <div class="toast__icons">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <div class="toast__body">
+        <div class="toast__title">success</div>
+        <div class="toast__message">
+          Lorem ipsum dolor sit amet alsflasjflksajflksafjlksaflksdfalksflkasfjklasjflksa
+        </div>
+  
+      </div>
+      <div class="toast__close">
+        <i class="fa-solid fa-xmark"></i>
+        
+      </div>
+    </div>
+    <div class="toast toast--error">
+      <div class="toast__icons">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <div class="toast__body">
+        <div class="toast__title">success</div>
+        <div class="toast__message">
+          Lorem ipsum dolor sit amet
+        </div>
+  
+      </div>
+      <div class="toast__close">
+        <i class="fa-solid fa-xmark"></i>
+        
+      </div>
+    </div>
+  </div>
+  <div>
+    <div onclick="showSuccessToast()" class="btn btn--success">show button success toast</div>
+    <div onclick="showDangerToast()" class="btn btn--danger">show button danger toast</div>
+  </div>
+  <script>
+
+    const showSuccessToast =
+    function toast(
+      title='',
+      message='',
+      type ='info', 
+      duration=3000) 
+      {
+        const main = document.querySelector('#toast');
+        if (main) {
+          const toastItem = document.createElement('div');
+          const icons = {
+            success: "fa-solid fa-check",
+            info: "fa-solid fa-info",
+            warning: "fa-solid fa-exclamation-triangle",
+            error: "fa-solid fa-exclamation-circle"
+          }
+          const icon = icons[type]
+          
+          toast.style.animation = `slideInLeft 0.4s ease-in fadeOut linear 1s 3s forwards;`
+
+          const delay = (duration / 1000) .toFixed(2)
+          toastItem.classList.add('toast', `toast--${type}`);
+          toastItem.innerHTML = `
+            <div class="toast__icons">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="toast__body">
+              <div class="toast__title">${title}</div>
+              <div class="toast__message">${message}</div>
+            </div>
+            <div class="toast__close">
+              <i class=${icon}></i>
+            </div>
+          `;
+          main.appendChild(toastItem);
+          setTimeout(() => {
+            main.removeChild(toastItem);
+          }, duration + 1000);
+        }
+    
+    
+      }
+
+    toast({
+      title:'success',
+      message: 'lorem',
+      type: 'info',
+      duration: 3000
+    }) 
+  </script>
+</body>
+</html>
