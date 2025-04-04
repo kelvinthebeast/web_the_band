@@ -14,6 +14,8 @@
   <!-- css -->
   <link rel="stylesheet" href="./asset/css/base.css">
   <link rel="stylesheet" href="./asset/css/main.css">
+  <!-- js -->
+   <script src="./js/handleQr.js"></script>
 </head>
 <body>
   <div class="app">
@@ -22,7 +24,21 @@
 
         <nav class="navbar">
           <ul class="navbar-list">
-            <li class="navbar-item navbar-link--seperate">Come to my shop KVELliot</li>
+            <li class="navbar-item navbar-link--seperate navbar-item--has-qr">
+              Come to my shop KVELliot
+              <div class="navbar-qrcode">
+                <img src="./asset/img/shopeeQrCode.png" alt="qr-code" class="qr-image" srcset="">
+                <div class="navbar-qrapp">
+                  <a href="" class="navbar-qr-link">
+                    <img src="./asset/img/googleplay-logo.png" alt="google play" class="qr-image-download" srcset="">
+
+                  </a>
+                  <a href="" class="navbar-qr-link">
+                    <img src="./asset/img/appstore-logo.png" alt="appstore" class="qr-image-download" srcset="">
+                  </a>
+                </div>
+              </div>
+            </li>
             <li class="navbar-item ">
                <span class="navbar-label--no-pointer">Connect</span>
               <a href="" class="navbar-icon-link">

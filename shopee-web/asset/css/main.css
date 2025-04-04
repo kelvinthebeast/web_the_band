@@ -73,3 +73,50 @@
   cursor: default;
   color: var(--white-color);
 }
+
+/* Header Qr code */
+.navbar-qrcode {
+  background-color: var(--white-color);
+  position: absolute;
+  width: 186px;
+  left: 0;
+  top: 100%;
+  padding: 8px;
+  border-radius: 2px;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.navbar-qrapp {
+  display: flex;
+  justify-content: space-between;
+
+}
+.qr-image {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+.navbar-qr-link:nth-child(1) {
+  margin-left: 11px;
+}
+.navbar-qr-link:nth-child(2) {
+  margin-right: 11px;
+}
+.qr-image-download {
+  height: 15px;
+}
+
+.navbar-item--has-qr:hover .navbar-qrcode {
+  display: block;
+
+}
+.navbar-qrcode:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top:118%;
+  padding: 8px;
+  border-radius:2px ;
+  display: block;
+}
+/* End header qr code */
