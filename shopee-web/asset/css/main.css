@@ -133,8 +133,30 @@
   animation: headerNotifyGrowth 0.3s ease-in-out forwards;
   transform-origin: calc(100% - 20px) right;
   display: none;
+  /* Trình duyệt tối ưu cho 2 thuộc tính opacity transform khi có will change */
+  will-change: opacity, transform;
   
 
+}
+.navbar-list .notify::before {
+  content: "";
+  border-width: 20px 30px;
+  border-style: solid;
+  border-color: transparent transparent var(--white-color) transparent;
+  position: absolute;
+  right: 1px;
+  top: -30px;
+}
+/* Tạo cầu  */
+.notify::after {
+  content: "";
+  display: block;
+  width: 90px;
+  position: absolute;
+  right: 0;
+  top: -16px;
+  height: 20px;
+  /* background-color: red; */
 }
 .notify-header {
   height: 40px;
